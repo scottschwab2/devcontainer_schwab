@@ -1,0 +1,27 @@
+{
+    "name": "mytestnumber1",
+    // define a dockerfile to use
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    // Pull features from MS feature repository
+    "features": {
+        "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
+        "ghcr.io/nikobockerman/devcontainer-features/poetry-persistent-cache:1": {},
+        "ghcr.io/audacioustux/devcontainers/common-utils-extras:1": {},
+        "ghcr.io/rio/features/k9s:1":{},
+        "ghcr.io/rio/features/k3d:1":{}
+    },
+    "extensions": [
+        "ms-vscode-remote.remote-containers"
+    ],
+
+    // Mount external sources inside the container
+    "mounts": [
+        {
+            "source": "C:\\Users\\scott\\.ssh",
+            "target": "/root/.ssh",
+            "type": "bind"
+        }
+    ]
+}
